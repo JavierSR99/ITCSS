@@ -34,3 +34,10 @@ $fs-14: map-get($font-sizes, "14");
 $fs-16: map-get($font-sizes, "16");
 $fs-20: map-get($font-sizes, "20");
 $fs-24: map-get($font-sizes, "24");
+
+/* BREAKPOINTS */
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;

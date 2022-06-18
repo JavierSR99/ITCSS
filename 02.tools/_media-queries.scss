@@ -1,0 +1,45 @@
+// APP MEDIA-QUERIES
+
+// < 575px
+@mixin xs-device {
+    @media (max-width: $bp-sm - 1) { @content; }
+}
+
+// >= 576px && < 767px
+@mixin sm-device {
+    @media (min-width: $bp-sm) and (max-width: $bp-md - 1) { @content; }
+}
+
+// >= 768px && <991px
+@mixin md-device {
+    @media (min-width: $bp-md) and (max-width: $bp-lg - 1) { @content; }
+}
+
+// >= 992px && <1199px
+@mixin lg-device {
+    @media (min-width: $bp-lg) and (max-width: $bp-xl - 1) { @content; }
+}
+
+// >= 1200px && < 1399px 
+@mixin xl-device {
+    @media (min-width: $bp-xl) and (max-width: $bp-xxl - 1) { @content; }
+}
+
+// >= 1400px
+@mixin xxl-device {
+    @media (min-width: $bp-xxl) { @content; }
+}
+
+/* 
+    HOW TO USE IT:
+
+    element {
+
+        ...
+
+        @include xs-device {
+            ...
+        }
+    }
+
+*/
