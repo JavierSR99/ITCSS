@@ -1,0 +1,20 @@
+// COLORS UTILITIES
+
+$color-keys: map-keys($colors);
+
+@each $color in $color-keys {
+    $value: map-get($colors, $color);
+
+    .u-color-#{$color} {
+        color: $value;
+    }
+
+    .u-border-color-#{$color} {
+        border-color: $value;
+    }
+
+    .u-bg-color-#{$color} {
+        background-color: $value;
+    }
+
+}
