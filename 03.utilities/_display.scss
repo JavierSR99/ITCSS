@@ -1,0 +1,11 @@
+// DISPLAY UTILITIES
+
+$display-keys: map-keys($display);
+
+@each $ds in $display-keys {
+    $value: map-get($display, $ds);
+
+    .u-ds-#{$ds} {
+        display: $value;
+    }
+}

@@ -1,0 +1,22 @@
+// FLEX UTILITIES
+
+/* ALIGNMENT */
+
+$justify-keys: map-keys($justify-content);
+$align-keys: map-keys($align-items);
+
+@each $justify in $justify-keys {
+    $value: map-get($justify-content, $justify);
+
+    .u-justify-#{$justify} {
+        justify-content: $value;
+    }
+}
+
+@each $align in $align-keys {
+    $value: map-get($align-items, $align);
+
+    .u-align-#{$align} {
+        align-items: $value;
+    }
+}
