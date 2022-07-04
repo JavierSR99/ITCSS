@@ -1,8 +1,16 @@
 // APP FUNCTIONS/MIXINS
 
+@function getUnit($value) {
+  @return str-slice($value * 0 + "", 2, -1);
+}
+
 /* CONVERTS PX TO REM */
 @function pxtorem($px) {
-    @return ($px / 16) + rem;
+    @if getUnit($px) == 'px' {
+        @return (($px / 1px) / 16) + rem;
+    } @else {
+        @return ($px / 16) + rem;
+    }
 }
 
 /* SETS WIDTH AND HEIGHT */
