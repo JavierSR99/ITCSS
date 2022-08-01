@@ -1,0 +1,21 @@
+// BUTTON COMPONENT
+
+.c-btn {
+    background-color: transparent;
+    border: pxtorem(1) solid $c-grey;
+    border-radius: pxtorem(4);
+    cursor: default;
+    font-size: pxtorem($fs-12);
+    padding: pxtorem(4) pxtorem(8);
+
+    &--primary {
+        @extend .c-btn;
+        background-color: $c-black;
+    }
+
+    &--secondary {
+        @extend .c-btn;
+        background-color: $c-white;
+    }
+
+}
