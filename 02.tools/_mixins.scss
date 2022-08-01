@@ -1,0 +1,63 @@
+/* SETS WIDTH AND HEIGHT */
+@mixin setWidthAndHeight ($width: 100%, $height: 100%) {
+    height: $height;
+    width: $width;
+}
+
+/* INSERT MEDIA-QUERIES IN CLASSES THROUGH SUFIXES */
+@mixin sufixes($property, $res) {
+    &\@xxl {
+      @include xxl-device {
+        #{$property}: $res !important;
+      }
+    }
+  
+    &\@xl {
+      @include xl-device {
+        #{$property}: $res !important;
+      }
+    }
+  
+    &\@lg {
+      @include lg-device {
+        #{$property}: $res !important;
+      }
+    }
+  
+    &\@md {
+      @include md-device {
+        #{$property}: $res !important;
+      }
+    }
+  
+    &\@xs {
+      @include xs-device {
+        #{$property}: $res !important;
+      }
+    }
+}
+
+
+/* ELLIPSIS MIXINS */
+@mixin ellipsis-text($lines: 3) {
+    display: -webkit-box;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+}
+
+@mixin ellipsis-word($width) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: #{$width};
+}
+
+/* FLEX ALIGNMENT */
+@mixin flex-align () {
+    align-items: $ver;
+    display: flex;
+    justify-content: $hor;
+}
