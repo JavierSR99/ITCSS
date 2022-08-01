@@ -1,27 +1,16 @@
 // APP FUNCTIONS/MIXINS
 
-/// Remove the unit of a length
-/// @param {Number} $number - Number to remove unit from
-/// @return {Number} - Unitless number
-@function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-      @return $number / ($number * 0 + 1);
-    }
-    @return $number;
+@function getUnit($value) {
+  @return str-slice($value * 0 + "", 2, -1);
 }
 
 /* CONVERTS PX TO REM */
 @function pxtorem($px) {
-
-    $result: null;
-
-    @if type-of($px) == 'number' {
-        $result: ($px / 16) + rem;
+    @if getUnit($px) == 'px' {
+        @return (($px / 1px) / 16) + rem;
     } @else {
-        $result: (($px / 1px) / 16) + rem;
+        @return ($px / 16) + rem;
     }
-
-    @return $result;
 }
 
 /* SETS WIDTH AND HEIGHT */
