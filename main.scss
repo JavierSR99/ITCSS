@@ -1,9 +1,9 @@
-// HERE THERE MUST BE IMPORTED THE "_ALL-X.SCSS" ARCHIVES IN THE ESTABLISHED ORDER
+// HERE THERE MUST BE useED THE "_ALL-X.SCSS" ARCHIVES IN THE ESTABLISHED ORDER
 // IF YOU NEED TO CHECK SOME CODE -> https://www.sassmeister.com/
-@import "00.settings/all-settings";
-@import "01.generics/all-generics";
-@import "02.tools/all-tools";
-@import "03.utilities/all-utilities";
-@import "04.components/all-components";
-@import "05.packages/all-packages";
-@import "06.overs/all-overs";
+@use "00.settings/all-settings";
+@use "01.generics/all-generics";
+@use "02.tools/all-tools";
+@use "03.utilities/all-utilities";
+@use "04.components/all-components";
+@use "05.packages/all-packages";
+@use "06.overs/all-overs";
