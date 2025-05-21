@@ -1,24 +1,6 @@
 // COLORS UTILITIES
 
-$color-keys: map-keys($colors);
+@use "03.tools/generate" as g;
+@use "01.settings/variables" as v;
 
-@each $color in $color-keys {
-    $value: map-get($colors, $color);
-
-    .u-color-#{$color} {
-        color: $value;
-    }
-
-    .u-border-color-#{$color} {
-        border-color: $value;
-    }
-
-    .u-bg-color-#{$color} {
-        background-color: $value;
-    }
-
-    .u-accent-#{$color} {
-        accent-color: $value;
-    }
-
-}
+@include g.generate-simple-utility( $map: v.$colors, $prop: "color", $label: "color" );

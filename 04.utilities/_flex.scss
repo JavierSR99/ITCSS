@@ -1,22 +1,8 @@
 // FLEX UTILITIES
 
+@use "03.tools/generate" as g;
+@use "01.settings/variables" as v;
+
 /* ALIGNMENT */
-
-$justify-keys: map-keys($justify-content);
-$align-keys: map-keys($align-items);
-
-@each $justify in $justify-keys {
-    $value: map-get($justify-content, $justify);
-
-    .u-justify-#{$justify} {
-        justify-content: $value;
-    }
-}
-
-@each $align in $align-keys {
-    $value: map-get($align-items, $align);
-
-    .u-align-#{$align} {
-        align-items: $value;
-    }
-}
+@include g.generate-simple-utility( $map: v.$align-items, $prop: "align-items", $label: "align" ); // Vertical
+@include g.generate-simple-utility( $map: v.$justify-content, $prop: "justify-content", $label: "justify" ); // Horizontal

@@ -1,11 +1,6 @@
 // DISPLAY UTILITIES
 
-$display-keys: map-keys($display);
+@use "03.tools/generate" as g;
+@use "01.settings/variables" as v;
 
-@each $ds in $display-keys {
-    $value: map-get($display, $ds);
-
-    .u-ds-#{$ds} {
-        display: $value;
-    }
-}
+@include g.generate-simple-utility( $map: v.$display, $prop: "display", $label: "ds" );
