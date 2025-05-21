@@ -1,0 +1,16 @@
+/* FONT VARIABLES */
+$font-sizes: (
+    "10" : 10px,
+    "12" : 12px,
+    "14" : 14px,
+    "16" : 16px,
+    "20" : 20px,
+    "24" : 24px
+);
+
+$fs-10: map-get($font-sizes, "10");
+$fs-12: map-get($font-sizes, "12");
+$fs-14: map-get($font-sizes, "14");
+$fs-16: map-get($font-sizes, "16");
+$fs-20: map-get($font-sizes, "20");
+$fs-24: map-get($font-sizes, "24");
