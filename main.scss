@@ -1,9 +1,7 @@
-// HERE THERE MUST BE useED THE "_ALL-X.SCSS" ARCHIVES IN THE ESTABLISHED ORDER
-// IF YOU NEED TO CHECK SOME CODE -> https://www.sassmeister.com/
-@use "00.settings/all-settings";
-@use "01.generics/all-generics";
-@use "02.tools/all-tools";
-@use "03.utilities/all-utilities";
-@use "04.components/all-components";
-@use "05.packages/all-packages";
-@use "06.overs/all-overs";
+@use "01.settings/all-settings";
+@use "02.generics/all-generics";
+@use "03.tools/all-tools";
+@use "04.utilities/all-utilities";
+@use "05.components/all-components";
+@use "06.packages/all-packages";
+@use "07.overs/all-overs";
